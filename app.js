@@ -5,7 +5,8 @@ function addTask() {
   var task = document.getElementById("input").value;
   var taskList = document.getElementById("list");
   var li = document.createElement("LI");
-  li.appendChild(document.createTextNode(task));
+  var text = document.createTextNode(task);
+  li.appendChild(text);
   taskList.appendChild(li);
   document.getElementById("input").value="";
   li.onclick = removeItem;
